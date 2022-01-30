@@ -11,8 +11,8 @@ const swiper = new Swiper('.swiper', {
 const modal=document.querySelector('.modal');
 const body = document.querySelector('body');
 const buttonmodal=document.querySelector('.main-display__button');
-const popupwindow=document.querySelector('.popup')
-const button=document.querySelector('.modal__button')
+const popupwindow=document.querySelector('.popup');
+const button=document.querySelector('.modal__button');
 buttonmodal.addEventListener('click',()=>{
   modal.classList.add('active');
   body.classList.add('lock');
@@ -27,6 +27,9 @@ modal.addEventListener('click',(e)=>{
 });
 
 button.addEventListener('click',()=>{
+  document.querySelector('.inp1').value='';
+  document.querySelector('.inp2').value='';
+  document.querySelector('.message').value='';
   modal.classList.remove('active');
   popupwindow.classList.add('active');
 });
