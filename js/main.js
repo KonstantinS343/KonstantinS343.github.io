@@ -25,7 +25,6 @@ modal.addEventListener('click',(e)=>{
     body.classList.remove('lock');
   }
 });
-
 button.addEventListener('click',()=>{
   document.querySelector('.inp1').value='';
   document.querySelector('.inp2').value='';
@@ -39,4 +38,28 @@ popupwindow.addEventListener('click',(e)=>{
     body.classList.remove('lock');
     popupwindow.classList.remove('active');
   }
+});
+function scrollTo(element){
+  window.scroll({
+    left:0,
+    top:element.offsetTop,
+    behavior:'smooth'
+  })
+}
+var review=document.querySelector('.first_li');
+var smrev=document.querySelector('#review');
+review.addEventListener('click',()=>{
+  scrollTo(smrev);
+});
+
+var about=document.querySelector('.second_li');
+var smabout=document.querySelector('#about');
+about.addEventListener('click',()=>{
+  scrollTo(smabout);
+});
+
+var inf=document.querySelector('.third_li');
+var footer=document.querySelector('#footer');
+inf.addEventListener('click',()=>{
+  scrollTo(footer);
 });

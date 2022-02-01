@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .main-display__list{
     display: flex;
+    cursor: pointer;
 }
 .main-display__list li:not(:last-child){
     margin-right: 2.5rem;
@@ -388,13 +389,14 @@ h1, h2, h3, h4, h5, h6{
     left:0;
     width: 100%;
     height: 100%;
-    display: flex;
     overflow-y:auto;
     overflow-x: auto;
     backdrop-filter: blur(4rem);
     padding:3rem 0;
     z-index: 100;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
 
 }
 .modal__inner{
@@ -504,11 +506,13 @@ h1, h2, h3, h4, h5, h6{
     position: fixed;
     width: 100%;
     height: 100%;
-    display: flex;
     background-color:rgba(0, 0, 0, 0.8) ; 
     top:0;
     left:0;  
-   display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+   z-index: 100;
 }
 .popup__body{
     min-height: 100%;
@@ -524,16 +528,14 @@ h1, h2, h3, h4, h5, h6{
     max-width:80rem;
     padding:3rem;
     position: relative;
-        border-radius:0.5rem;
+    border-radius:0.5rem;
 }
 .popup__close{
     position:absolute;
-    right: 0.5rem;
+    right: 0.8rem;
     top:0.5rem;
     color:#000;
-    width: 2rem;
-    height: 2rem;
-    text-decoration: none;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 .popup__text{
@@ -544,6 +546,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .active{
     display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 body.lock {
     overflow: hidden;

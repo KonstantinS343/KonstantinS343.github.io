@@ -1,6 +1,6 @@
 @media only screen and (max-width:1200px){
     .header{
-        width: 130rem;
+        width: 140rem;
     }
     .main-display__body-left {
         padding-left: 10rem;
@@ -10,9 +10,10 @@
     }
     .about__items {
         padding-left: 8rem;
+        margin-right: -10rem;
     }
     .review {
-        width: 130rem;
+        width: 140rem;
     }
     .footer {
         width: 130rem;
